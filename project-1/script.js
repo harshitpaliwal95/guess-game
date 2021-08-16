@@ -27,6 +27,7 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     displayMessage('🙉 no number');
   }
+
   // if guess is wrong
   else if (guess !== secretNumber) {
     if (score > 1) {
@@ -57,7 +58,9 @@ document.querySelector('.check').addEventListener('click', function () {
   //   }
   else if (secretNumber === guess) {
     displayMessage('🥳 Congartulation');
+
     document.querySelector('body').style.backgroundColor = '#60b347';
+
     document.querySelector('.number').textContent = secretNumber;
 
     if (score > highScore) {
